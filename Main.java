@@ -12,6 +12,6 @@ public Main(){
 		studentNames.add("Savitha");
 		studentNames.add("");
 		studentNames.add("Alex");
-		studentNames.add("");
+		studentNames.add("Jake");
 	}
 }
