@@ -1,0 +1,10 @@
+Strike:1
+Genetic Algorithm:1
+Crush:3
+Biased Cognition:1
+All For One:2
+Genetic Algorithm:1
+Strike:1
+Genetic Algorithm:1
+Strike1
+Strike:400000
