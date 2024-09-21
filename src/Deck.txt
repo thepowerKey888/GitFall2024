@@ -1,10 +1,8 @@
 Strike:1
-Genetic Algorithm:1
-Crush:3
-Biased Cognition:1
-All For One:2
-Genetic Algorithm:1
+Genetic Algorithm:7
+Crush:93
+Biased Cognition:5
+All For One:3
+Genetic Algorithm:3
 Strike:1
 Genetic Algorithm:1
-Strike1
-Strike:400000
