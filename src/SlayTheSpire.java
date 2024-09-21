@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class SlayTheSpire {
 
     static List<String> invalid_cards = new ArrayList<>();
@@ -110,26 +112,34 @@ public class SlayTheSpire {
     }
 
 
-    public static void generateFile(boolean file_to_generate){
-
-        if(file_to_generate == false){
-
-            //generate VOID file
+    public static int calculateTotalDeckCost(HashMap<String, Integer> cardDeck){
+        int total_cost = 0;
+        for (Integer cost : cardDeck.values()){
+            total_cost += cost; //adds up all cost values in cardDeck HashMap
         }
 
-        if(file_to_generate == true){
+        return total_cost;
+    }
+    public static void generateFile(boolean file_to_generate, String file_report_path){
 
-            //generate REPORT (deck id, total cost of cards in deck, histogram of cards in deck
+        String deck_ID = DeckIDGenerator.generateUniqueNumber();
+        int total_cost = calculateTotalDeckCost(cardDeck);
+
+        if (!file_to_generate) { // generate VOID file
+            GeneratePDFFile.generateVoidPDF(file_report_path, deck_ID);
+        } else { // generate REPORT
+            GeneratePDFFile.generatePDF(file_report_path, deck_ID, total_cost, "histogram");
         }
     }
     public static void main(String[] args) {
 
         String filePath = "/Users/sophiabrix/Desktop/Java Programs/SlayTheSpireDeckCostTally/src/Deck.txt";
+        String file_report_path = "/Users/sophiabrix/Desktop/test pdf gen/SpireDeck_.pdf";
 
         //SCANNER TO TAKE IN INPUT
         boolean file_to_generate = readTxtFile(filePath);
 
-        generateFile(file_to_generate);
+        generateFile(file_to_generate, file_report_path);
 
         System.out.println(cardDeck);
     }
@@ -137,6 +147,12 @@ public class SlayTheSpire {
 }
 
 /*
+Things to Do:
+- make histogram method
+- have the PDF save to the same place the input file was saved to but save it to the correct path (need to chop)
+
+
+
 Things to check for:
 - invalid cost value
 - empty names
