@@ -1,8 +1,18 @@
 Strike:1
-Genetic Algorithm:7
-Crush:93
-Biased Cognition:5
-All For One:3
-Genetic Algorithm:3
+Whirlwind:3
 Strike:1
-Genetic Algorithm:1
+Whirlwind:3
+Strike:1
+Whirlwind:3
+Battle Trance:4
+Battle Trance:5
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4
+Bluge:4

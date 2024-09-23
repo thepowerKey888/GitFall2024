@@ -133,7 +133,6 @@ public class GeneratePDFFile {
      * @throws DocumentException if an error occurs while creating the PDF
      * @throws IOException if an error occurs while writing to the file
      */
-
     public static void generateVoidPDF(String file_path, String deck_ID){
 
         try{

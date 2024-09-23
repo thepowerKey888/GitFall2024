@@ -45,7 +45,7 @@ public class DeckIDGenerator {
                 generatedIDs.add(line.trim());
             }
         } catch (IOException e) {
-            //file might not exist on first run, handle gracefully
+            //file might not exist on first run
         }
     }
 
@@ -97,3 +97,12 @@ public class DeckIDGenerator {
         }
     }
 }
+
+
+
+/*
+
+Git, push, choose fork
+
+go to command: git pull, git merge master --allow-unrelated-histories, git push
+ */

@@ -46,7 +46,155 @@ public class SlayTheSpire {
 
     static List<String> invalid_cards = new ArrayList<>();
     static HashMap<String, Integer> cardDeck = new HashMap<>();
+    static List<String> cardNames = new ArrayList<>();
 
+
+    /**
+     * The validCards method initializes a predefined list of valid card names for the game "Slay the Spire".
+     * This method populates the global cardNames list with a collection of card names used in the game.
+     * Each card name added represents a playable card from the game across various characters and card types.
+     */
+    public static void validCards(){
+        cardNames.add("Strike");
+        cardNames.add("Defend");
+        cardNames.add("Bash");
+        cardNames.add("Inflame");
+        cardNames.add("Cleave");
+        cardNames.add("Whirlwind");
+        cardNames.add("Juggernaut");
+        cardNames.add("Reaper");
+        cardNames.add("Bludgeon");
+        cardNames.add("Double Tap");
+        cardNames.add("Iron Wave");
+        cardNames.add("Battle Trance");
+        cardNames.add("Armaments");
+        cardNames.add("Shrug It Off");
+        cardNames.add("Demon Form");
+        cardNames.add("Anger");
+        cardNames.add("Body Slam");
+        cardNames.add("Clothesline");
+        cardNames.add("Dropkick");
+        cardNames.add("Entrench");
+        cardNames.add("Evolve");
+        cardNames.add("Exhume");
+        cardNames.add("Flame Barrier");
+        cardNames.add("Ghostly Armor");
+        cardNames.add("Headbutt");
+        cardNames.add("Heavy Blade");
+        cardNames.add("Immolate");
+        cardNames.add("Infernal Blade");
+        cardNames.add("Limit Break");
+        cardNames.add("Metallicize");
+        cardNames.add("Pummel");
+        cardNames.add("Rampage");
+        cardNames.add("Sever Soul");
+        cardNames.add("Spot Weakness");
+        cardNames.add("Sword Boomerang");
+        cardNames.add("True Grit");
+        cardNames.add("Uppercut");
+        cardNames.add("Wild Strike");
+        cardNames.add("Neutralize");
+        cardNames.add("Survivor");
+        cardNames.add("Adrenaline");
+        cardNames.add("After Image");
+        cardNames.add("Backflip");
+        cardNames.add("Bane");
+        cardNames.add("Blade Dance");
+        cardNames.add("Bullet Time");
+        cardNames.add("Caltrops");
+        cardNames.add("Cloak and Dagger");
+        cardNames.add("Corpse Explosion");
+        cardNames.add("Crippling Poison");
+        cardNames.add("Dash");
+        cardNames.add("Deadly Poison");
+        cardNames.add("Deflect");
+        cardNames.add("Dodge and Roll");
+        cardNames.add("Escape Plan");
+        cardNames.add("Flying Knee");
+        cardNames.add("Footwork");
+        cardNames.add("Glass Knife");
+        cardNames.add("Heel Hook");
+        cardNames.add("Infinite Blades");
+        cardNames.add("Noxious Fumes");
+        cardNames.add("Outmaneuver");
+        cardNames.add("Poisoned Stab");
+        cardNames.add("Predator");
+        cardNames.add("Prepared");
+        cardNames.add("Quick Slash");
+        cardNames.add("Skewer");
+        cardNames.add("Slice");
+        cardNames.add("Tactician");
+        cardNames.add("Unload");
+        cardNames.add("Zap");
+        cardNames.add("Dualcast");
+        cardNames.add("All for One");
+        cardNames.add("Amplify");
+        cardNames.add("Ball Lightning");
+        cardNames.add("Biased Cognition");
+        cardNames.add("Capacitor");
+        cardNames.add("Chaos");
+        cardNames.add("Cold Snap");
+        cardNames.add("Compile Driver");
+        cardNames.add("Coolheaded");
+        cardNames.add("Creative AI");
+        cardNames.add("Defragment");
+        cardNames.add("Doom and Gloom");
+        cardNames.add("Echo Form");
+        cardNames.add("Electrodynamics");
+        cardNames.add("FTL");
+        cardNames.add("Force Field");
+        cardNames.add("Fusion");
+        cardNames.add("Genetic Algorithm");
+        cardNames.add("Glacier");
+        cardNames.add("Go for the Eyes");
+        cardNames.add("Heatsinks");
+        cardNames.add("Hyperbeam");
+        cardNames.add("Machine Learning");
+        cardNames.add("Melter");
+        cardNames.add("Multi-Cast");
+        cardNames.add("Reboot");
+        cardNames.add("Recursion");
+        cardNames.add("Recycle");
+        cardNames.add("Reinforced Body");
+        cardNames.add("Static Discharge");
+        cardNames.add("Steam Barrier");
+        cardNames.add("Storm");
+        cardNames.add("Sweeping Beam");
+        cardNames.add("Tempest");
+        cardNames.add("Thunder Strike");
+        cardNames.add("Turbo");
+        cardNames.add("White Noise");
+        cardNames.add("Eruption");
+        cardNames.add("Vigilance");
+        cardNames.add("Alpha");
+        cardNames.add("Blasphemy");
+        cardNames.add("Bowling Bash");
+        cardNames.add("Brilliance");
+        cardNames.add("Carve Reality");
+        cardNames.add("Consecrate");
+        cardNames.add("Crush Joints");
+        cardNames.add("Cut Through Fate");
+        cardNames.add("Deceive Reality");
+        cardNames.add("Devotion");
+        cardNames.add("Empty Body");
+        cardNames.add("Empty Fist");
+        cardNames.add("Fear No Evil");
+        cardNames.add("Foresight");
+        cardNames.add("Indignation");
+        cardNames.add("Judgement");
+        cardNames.add("Mental Fortress");
+        cardNames.add("Nirvana");
+        cardNames.add("Prostrate");
+        cardNames.add("Sanctity");
+        cardNames.add("Sash Whip");
+        cardNames.add("Signature Move");
+        cardNames.add("Swivel");
+        cardNames.add("Third Eye");
+        cardNames.add("Tranquility");
+        cardNames.add("Vault");
+        cardNames.add("Wave of the Hand");
+        cardNames.add("Worship");
+    }
 
     /**
      * Reads a text file and processes its content to populate a card deck and
@@ -59,7 +207,7 @@ public class SlayTheSpire {
      * false.</p>
      *
      * <p>The expected format for each valid line is "key:value", where 'key'
-     * represents the card name and 'value' is an integer between 0 and 6. Lines
+     * represents a valid card name and 'value' is an integer between 0 and 6. Lines
      * that do not conform to this format, are empty, or have a 'value' outside
      * this range will be considered invalid.</p>
      *
@@ -82,16 +230,17 @@ public class SlayTheSpire {
             //read file line by line
             while ((line = reader.readLine()) != null) {
                 line_counter += 1; //counts the amount of lines in the txt file
-                if(line_counter > 1000){
+
+                if(line_counter > 1000){ //if there's more than 1000 lines void report is made
                     return false;
                 }
 
-                if( invalid_cards.size() > 10){
+                if( invalid_cards.size() > 10){ //if there's more than 10 invalid cards void report is made
                     return false;
                 }
 
                 line_no_space = line.replaceAll("\\s+", ""); //remove white spaces in string
-                //line = line.toLowerCase(); //remove uppercase
+
 
                 if (line_no_space.isEmpty()){ //checks if string is empty
                     invalid_cards.add(line); //adds to invalid_cards if true
@@ -109,6 +258,11 @@ public class SlayTheSpire {
 
                     if(!(value <= 6) || !(value >= 0)){
                         invalid_cards.add(line); //adds invalid card to invalid_card list
+                    }
+
+                    // Check if key (card name) exists in the cardNames list
+                    else if (!cardNames.contains(key)) {
+                        invalid_cards.add(line); // if key is not in cardNames, add it to invalid_cards
                     }
 
                     else if (cardDeck.containsKey(key)) {
@@ -223,6 +377,7 @@ public class SlayTheSpire {
      *
      * <p>This method performs the following tasks:</p>
      * <ol>
+     *     <li>Generates list of valid card names.</li>
      *     <li>Prompts the user to enter a file path.</li>
      *     <li>Checks if the provided path corresponds to a valid file.</li>
      *     <li>Reads the contents of the file to determine if a PDF report
@@ -236,6 +391,7 @@ public class SlayTheSpire {
      * @param args command-line arguments (not used in this application)
      */
     public static void main(String[] args) {
+        validCards();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the file path:");
         //String filePath = "/Users/sophiabrix/Desktop/Java Programs/SlayTheSpireDeckCostTally/src/Deck.txt";
@@ -256,10 +412,3 @@ public class SlayTheSpire {
 
     }
 }
-
-/*
-Things to Do:
-
-AFTER ALL FILES HAVE BEEN GENERATED THE HASHMAP AND LIST SHOULD BE CLEARED!!!
-
- */
